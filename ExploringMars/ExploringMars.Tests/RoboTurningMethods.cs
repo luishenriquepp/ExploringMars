@@ -6,42 +6,42 @@ namespace ExploringMars.Test
     [TestClass]
     public class RoboTurningMethods
     {
-        Robo robo = new Robo();
+        Robot robo = new Robot();
 
         [TestMethod]
         public void TurnRight_Should_Return_East()
         {
-            robo.ahead = Cordenada.N;
+            robo.ahead = Cordenada.North;
             robo.TurnRight();
 
-            Assert.AreEqual(Cordenada.E, robo.ahead);
+            Assert.AreEqual(Cordenada.East, robo.ahead);
         }
 
         [TestMethod]
         public void TurnRight_Should_Return_Nort()
         {
-            robo.ahead = Cordenada.W;
+            robo.ahead = Cordenada.West;
             robo.TurnRight();
 
-            Assert.AreEqual(Cordenada.N, robo.ahead);
+            Assert.AreEqual(Cordenada.North, robo.ahead);
         }
 
         [TestMethod]
         public void TurnLeft_Should_Return_West()
         {
-            robo.ahead = Cordenada.N;
+            robo.ahead = Cordenada.North;
             robo.TurnLeft();
 
-            Assert.AreEqual(Cordenada.W, robo.ahead);
+            Assert.AreEqual(Cordenada.West, robo.ahead);
         }
 
         [TestMethod]
         public void TurnLeft_Should_Return_South()
         {
-            robo.ahead = Cordenada.W;
+            robo.ahead = Cordenada.West;
             robo.TurnLeft();
 
-            Assert.AreEqual(Cordenada.S, robo.ahead);
+            Assert.AreEqual(Cordenada.South, robo.ahead);
         }
     }
 }
